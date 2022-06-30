@@ -1,6 +1,19 @@
 import React from 'react';
 import './sidebar.css';
-import { LineStyle, Timeline, TrendingUp, PermIdentity, Storefront, AttachMoney, BarChart, MailOutlined, DynamicFeed, ChatBubbleOutlined, ReportOutlined, WorkOutlined } from '@material-ui/icons';
+import {
+  LineStyle,
+  Timeline,
+  TrendingUp,
+  PermIdentity,
+  Storefront,
+  AttachMoney,
+  BarChart,
+  MailOutlined,
+  DynamicFeed,
+  ChatBubbleOutlined,
+  ReportOutlined,
+  WorkOutlined,
+} from '@mui/icons-material';
 const Sidebar = () => {
   return (
     <div className='sidebar'>
@@ -9,7 +22,7 @@ const Sidebar = () => {
           <h3 className='sidebarTitle'>Dashboard</h3>
           <ul className='sidebarListMenu'>
             <li className='sidebarListItem active'>
-              <LineStyle className='sidebarIcon'/>
+              <LineStyle className='sidebarIcon' />
               Home
             </li>
             <li className='sidebarListItem'>
@@ -17,7 +30,7 @@ const Sidebar = () => {
               Analytics
             </li>
             <li className='sidebarListItem'>
-              <TrendingUp className='sidebarIcon'/>
+              <TrendingUp className='sidebarIcon' />
               Sales
             </li>
           </ul>
@@ -26,7 +39,7 @@ const Sidebar = () => {
           <h3 className='sidebarTitle'>Quick Menu</h3>
           <ul className='sidebarListMenu'>
             <li className='sidebarListItem'>
-              <PermIdentity className='sidebarIcon'/>
+              <PermIdentity className='sidebarIcon' />
               Users
             </li>
             <li className='sidebarListItem'>
@@ -34,11 +47,11 @@ const Sidebar = () => {
               Products
             </li>
             <li className='sidebarListItem'>
-              <AttachMoney className='sidebarIcon'/>
+              <AttachMoney className='sidebarIcon' />
               Transactions
             </li>
             <li className='sidebarListItem'>
-              <BarChart className='sidebarIcon'/>
+              <BarChart className='sidebarIcon' />
               Reports
             </li>
           </ul>
@@ -47,7 +60,7 @@ const Sidebar = () => {
           <h3 className='sidebarTitle'>Notifications</h3>
           <ul className='sidebarListMenu'>
             <li className='sidebarListItem'>
-              <MailOutlined className='sidebarIcon'/>
+              <MailOutlined className='sidebarIcon' />
               Mail
             </li>
             <li className='sidebarListItem'>
@@ -55,7 +68,7 @@ const Sidebar = () => {
               Feedback
             </li>
             <li className='sidebarListItem'>
-              <ChatBubbleOutlined className='sidebarIcon'/>
+              <ChatBubbleOutlined className='sidebarIcon' />
               Messages
             </li>
           </ul>
@@ -64,7 +77,7 @@ const Sidebar = () => {
           <h3 className='sidebarTitle'>Staff</h3>
           <ul className='sidebarListMenu'>
             <li className='sidebarListItem'>
-              <WorkOutlined className='sidebarIcon'/>
+              <WorkOutlined className='sidebarIcon' />
               Manage
             </li>
             <li className='sidebarListItem'>
@@ -72,16 +85,14 @@ const Sidebar = () => {
               Analytics
             </li>
             <li className='sidebarListItem'>
-              <ReportOutlined className='sidebarIcon'/>
+              <ReportOutlined className='sidebarIcon' />
               Reports
             </li>
           </ul>
         </div>
-        
       </div>
     </div>
   );
 };
-
 
 export default Sidebar;
