@@ -9,7 +9,7 @@ const FeaturedInfo = () => {
           <span className='featuredMoney'>Rp200.000</span>
           <span className='featuredMoneyRate'>
             -10
-            <ArrowDropDown className='featuredIcon negative'/>
+            <ArrowDropDown className='featuredIcon negative' />
           </span>
         </div>
         <span className='featuredSubtitle'>Compared to last month</span>
@@ -20,7 +20,7 @@ const FeaturedInfo = () => {
           <span className='featuredMoney'>Rp2000.000</span>
           <span className='featuredMoneyRate'>
             -11
-            <ArrowDropDown className='featuredIcon negative'/>
+            <ArrowDropDown className='featuredIcon negative' />
           </span>
         </div>
         <span className='featuredSubtitle'>Compared to last month</span>
@@ -31,7 +31,7 @@ const FeaturedInfo = () => {
           <span className='featuredMoney'>Rp200.000</span>
           <span className='featuredMoneyRate'>
             +20
-            <ArrowDropUp className='featuredIcon'/>
+            <ArrowDropUp className='featuredIcon' />
           </span>
         </div>
         <span className='featuredSubtitle'>Compared to last month</span>
