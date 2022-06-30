@@ -1,5 +1,5 @@
 import './featuredInfo.css';
-import { ArrowDropDown, ArrowDropUp } from '@material-ui/icons';
+import { ArrowDropDown, ArrowDropUp } from '@mui/icons-material';
 const FeaturedInfo = () => {
   return (
     <div className='featured'>

@@ -13,7 +13,7 @@ import {
   ChatBubbleOutlined,
   ReportOutlined,
   WorkOutlined,
-} from '@material-ui/icons';
+} from '@mui/icons-material';
 
 const Sidebar = () => {
   return (
