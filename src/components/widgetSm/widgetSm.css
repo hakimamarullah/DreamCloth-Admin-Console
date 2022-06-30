@@ -1,0 +1,63 @@
+.widgetSm{
+    flex:1;
+    box-shadow: 2px 2px 7px 0px rgba(26, 25, 25, 0.39);
+    -webkit-box-shadow: 2px 2px 7px 0px rgba(26, 25, 25, 0.39);
+    -moz-box-shadow: 2px 2px 7px 0px rgba(26, 25, 25, 0.39);
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.widgetSmTitle{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.widgetSmList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.widgetSmListItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+.widgetSmPic{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.widgetSmUser{
+    display: flex;
+    flex-direction: column;
+}
+
+.widgetSmUsername{
+    font-weight: 600;
+}
+
+.widgetSmUserTitle{
+    font-weight: 300;
+}
+
+.widgetSmBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    border: none;
+    cursor: pointer;
+    padding: 7px 10px;
+    border-radius: 6px;
+    background-color: #eeeef7;
+}
+
+.widgetSmIcon{
+    font-size: 16px !important;
+    margin-right: 5px;
+}
