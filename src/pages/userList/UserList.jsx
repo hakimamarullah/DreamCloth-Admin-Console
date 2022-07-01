@@ -1,44 +1,66 @@
 import './userList.css';
 import { DataGrid } from '@mui/x-data-grid';
+import { DeleteOutlined } from '@mui/icons-material';
+import { userRows } from '../../data';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+
 const UserList = () => {
+  const [data, setData] = useState(userRows);
+  const userCell = (params) => {
+    return (
+      <div className='userListUser'>
+        <img src={params.row.avatar} alt='' className='userListImg' />
+        {params.row.username}
+      </div>
+    );
+  };
+
+  const handleDelete = (id)=>{
+    setData(data.filter(item => item.id !== id));
+  }
+  const actionCell = (params) => {
+    return (
+      <>
+        <Link to={'/user/'+params.row.id}>
+          <button className='userListEdit'>Edit</button>
+        </Link>
+
+        <DeleteOutlined className='userListDelete' onClick={()=>handleDelete(params.row.id)}/>
+      </>
+    );
+  };
   const columns = [
     { field: 'id', headerName: 'ID', width: 70 },
-    { field: 'firstName', headerName: 'First name', width: 130 },
-    { field: 'lastName', headerName: 'Last name', width: 130 },
+    { field: 'user', headerName: 'User', width: 150, renderCell: userCell },
+    { field: 'email', headerName: 'Email', width: 180 },
     {
-      field: 'age',
-      headerName: 'Age',
-      type: 'number',
+      field: 'status',
+      headerName: 'Status',
       width: 90,
     },
     {
-      field: 'fullName',
-      headerName: 'Full name',
-      description: 'This column has a value getter and is not sortable.',
-      sortable: false,
+      field: 'transactions',
+      headerName: 'Transactions',
       width: 160,
+    },
+    {
+      field: 'action',
+      headerName: 'Action',
+      width: 160,
+      renderCell: actionCell,
     },
   ];
 
-  const rows = [
-    { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-    { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-    { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-    { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-    { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-    { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-    { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-    { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-    { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-  ];
   return (
     <div className='userList'>
       <DataGrid
-        rows={rows}
+        rows={data}
         columns={columns}
-        pageSize={5}
+        pageSize={10}
         rowsPerPageOptions={[5]}
         checkboxSelection
+        disableSelectionOnClick
       />
     </div>
   );
