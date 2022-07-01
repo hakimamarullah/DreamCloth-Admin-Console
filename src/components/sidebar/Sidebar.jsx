@@ -69,10 +69,15 @@ const Sidebar = () => {
                 Users
               </li>
             </Link>
-            <li className='sidebarListItem' onClick={(e) => handleClickMenu(e)}>
-              <Storefront className='sidebarIcon' />
-              Products
-            </li>
+            <Link to='/products' className='link'>
+              <li
+                className='sidebarListItem'
+                onClick={(e) => handleClickMenu(e)}
+              >
+                <Storefront className='sidebarIcon' />
+                Products
+              </li>
+            </Link>
             <li className='sidebarListItem' onClick={(e) => handleClickMenu(e)}>
               <AttachMoney className='sidebarIcon' />
               Transactions
