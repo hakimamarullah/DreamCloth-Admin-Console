@@ -2,21 +2,21 @@ import React from 'react';
 import './login.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import { useDispatch } from 'react-redux';
+import { login } from '../../redux/APICalls';
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-
-  const handleLogin = (event)=>{
+  const dispatch = useDispatch();
+ 
+  const handleLogin = (event) => {
     event.preventDefault();
+    login(dispatch, { username, password });
 
-    console.warn(username);
-    console.warn(password);
-    window.location.href = '/'
-  }
+  };
   return (
     <div className='login'>
-      <h1 className='loginTitle'>Login</h1>
+      <h1 className='loginTitle'>Admin Console Login</h1>
       <form className='loginForm'>
         <div className='loginItem'>
           <label>Username</label>
@@ -41,7 +41,12 @@ const Login = () => {
             </span>
           </div>
         </div>
-        <button className='loginBtn' onClick={handleLogin}>Sign In</button>
+        <button className='loginBtn' onClick={handleLogin}>
+          Sign In
+        </button>
+        {/* {error && <div className='helperText-error'>
+          <span>{loginResponse.message}</span>
+        </div>} */}
       </form>
     </div>
   );

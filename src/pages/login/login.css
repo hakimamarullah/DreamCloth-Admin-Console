@@ -1,16 +1,16 @@
 .login{
-    flex: 4;
     padding: 20px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    flex: 1;
 }
 
 .loginForm{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 50%;
+    width: 30%;
     margin-top: 30px;
 }
 
@@ -50,4 +50,8 @@
     justify-content: flex-end;
     margin-top: 5px;
     font-size: 14px;
+}
+
+.helperText-error{
+    color: red;
 }
